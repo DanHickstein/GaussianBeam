@@ -1,0 +1,70 @@
+<!-- Elements -->
+<!ELEMENT gaussianBeam  (bench, view)>
+<!ELEMENT bench         (wavelength, leftBoundary, rightBoundary, targetBeam*, beamFit*, opticsList)>
+<!ELEMENT wavelength    (#PCDATA)>
+<!ELEMENT leftBoundary  (#PCDATA)>
+<!ELEMENT rightBoundary (#PCDATA)>
+<!ELEMENT targetBeam    (waist, waistPosition, (waist, waistPosition)? , wavelength, index?, M2?, targetOverlap, targetOrientation)>
+<!ELEMENT waist              (#PCDATA)>
+<!ELEMENT waistPosition      (#PCDATA)>
+<!ELEMENT angle              (#PCDATA)>
+<!ELEMENT index              (#PCDATA)>
+<!ELEMENT M2                 (#PCDATA)>
+<!ELEMENT targetOverlap      (#PCDATA)>
+<!ELEMENT targetOrientation  (#PCDATA)>
+<!ELEMENT beamFit       (name, dataType, color?, orientation, data*)>
+<!ELEMENT name          (#PCDATA)>
+<!ELEMENT dataType      (#PCDATA)>
+<!ELEMENT color         (#PCDATA)>
+<!ELEMENT orientation   (#PCDATA)>
+<!ELEMENT data          (position, value, value?)>
+<!ELEMENT value         (#PCDATA)>
+<!ELEMENT position      (#PCDATA)>
+<!ELEMENT opticsList    (createBeam, (lens | flatMirror | curvedMirror | flatInterface | curvedInterface | dielectricSlab | genericABCD)*)>
+<!ELEMENT createBeam      (beam, position, angle?, orientation?, name, absoluteLock, relativeLockParent?)>
+<!ELEMENT beam            (waist, waistPosition, (waist, waistPosition)? , wavelength, index?, M2?)>
+<!ELEMENT absoluteLock       (#PCDATA)>
+<!ELEMENT relativeLockParent (#PCDATA)>
+<!ELEMENT lens            (focal, position, angle?, orientation?, name, absoluteLock, relativeLockParent?)>
+<!ELEMENT focal              (#PCDATA)>
+<!ELEMENT flatMirror      (position, angle?, orientation?, name, absoluteLock, relativeLockParent?)>
+<!ELEMENT curvedMirror    (curvatureRadius, position, angle?, orientation?, name, absoluteLock, relativeLockParent?)>
+<!ELEMENT curvatureRadius    (#PCDATA)>
+<!ELEMENT flatInterface   (indexRatio, position, angle?, orientation?, name, absoluteLock, relativeLockParent?)>
+<!ELEMENT indexRatio         (#PCDATA)>
+<!ELEMENT curvedInterface (indexRatio, surfaceRadius, position, angle?, orientation?, name, absoluteLock, relativeLockParent?)>
+<!ELEMENT surfaceRadius      (#PCDATA)>
+<!ELEMENT dielectricSlab  (indexRatio, width, position, angle?, orientation?, name, absoluteLock, relativeLockParent?)>
+<!ELEMENT width              (#PCDATA)>
+<!ELEMENT genericABCD     (width, A, B, C, D, position, angle?, orientation?, name, absoluteLock, relativeLockParent?)>
+<!ELEMENT A                  (#PCDATA)>
+<!ELEMENT B                  (#PCDATA)>
+<!ELEMENT C                  (#PCDATA)>
+<!ELEMENT D                  (#PCDATA)>
+<!ELEMENT view          (horizontalRange, origin, beamScale?, opticsHeight?, showTargetBeam)>
+<!ELEMENT horizontalRange (#PCDATA)>
+<!ELEMENT origin          (#PCDATA)>
+<!ELEMENT beamScale       (#PCDATA)>
+<!ELEMENT opticsHeight    (#PCDATA)>
+<!ELEMENT showTargetBeam  (#PCDATA)>
+
+<!-- Attributes -->
+<!ATTLIST gaussianBeam    version     CDATA  #REQUIRED>
+<!ATTLIST bench           id          CDATA  #REQUIRED>
+<!ATTLIST targetBeam      id          CDATA  #REQUIRED>
+<!ATTLIST beamFit         id          CDATA  #REQUIRED>
+<!ATTLIST data            id          CDATA  #REQUIRED>
+<!ATTLIST value           orientation CDATA  #REQUIRED>
+<!ATTLIST waist           orientation CDATA  #REQUIRED>
+<!ATTLIST waistPosition   orientation CDATA  #REQUIRED>
+<!ATTLIST createBeam      id          CDATA  #REQUIRED>
+<!ATTLIST lens            id          CDATA  #REQUIRED>
+<!ATTLIST flatMirror      id          CDATA  #REQUIRED>
+<!ATTLIST curvedMirror    id          CDATA  #REQUIRED>
+<!ATTLIST flatInterface   id          CDATA  #REQUIRED>
+<!ATTLIST curvedInterface id          CDATA  #REQUIRED>
+<!ATTLIST dielectricSlab  id          CDATA  #REQUIRED>
+<!ATTLIST genericABCD     id          CDATA  #REQUIRED>
+<!ATTLIST showTargetBeam  id          CDATA  #REQUIRED>
+<!ATTLIST view            id          CDATA  #REQUIRED
+                          bench       CDATA  #REQUIRED>

@@ -1,0 +1,22 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource prefix="/" >
+		<file>images/document-new.png</file>
+		<file>images/document-open.png</file>
+		<file>images/document-print.png</file>
+		<file>images/document-save-as.png</file>
+		<file>images/document-save.png</file>
+		<file>images/edit-add.png</file>
+		<file>images/edit-delete.png</file>
+		<file>images/zoom-best-fit.png</file>
+		<file>images/zoom-in.png</file>
+		<file>images/zoom-out.png</file>
+		<file>images/zoom-original.png</file>
+		<file>images/object-locked.png</file>
+		<file>images/object-unlocked.png</file>
+		<file>images/preferences-system.png</file>
+		<file>images/gaussianbeam16.png</file>
+		<file>xslt/1_0_to_1_1.xsl</file>
+		<file>xslt/1_1_to_1_2.xsl</file>
+		<file>../po/GaussianBeam_fr.qm</file>
+	</qresource>
+</RCC>

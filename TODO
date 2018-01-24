@@ -1,0 +1,71 @@
+WISHLIST:
+	Relative waist position
+	Lens selection
+	Sensitivity graph
+	Lens movement magnification -> multiple views
+	Telescope lens lock
+	Print
+	Forbidden area
+	Diaphragme
+	Relative distances on graph
+	Export graph & tables to text data
+	Optical cavities, eigen mode and stability.
+	Waist relative to selection
+	Wavefront on graph
+	Tune the number of significative digits in editors and delegates
+	grid
+	when moving an optics, display the optics position
+	make unit tests for saving/loading
+	undo framework / file modified
+	Thick lens, thermal lens
+	Camera interfaces
+	Set view limits to bench limits button
+	TEMmn modes
+	more intrication between opticsbench bounds and view bounds
+	Scripting
+	Unittest
+	explore the q/n = (Aq/n + B)/(Cq/n + D) expression
+
+BUGS:
+	When adding an optics, the validity of the positioning (optics ovelap, opticsbench boundaries, exlcusion areas is not checked)
+	When moving an optics to an invalid area, the optics does not stick to the closest possible point to the invalid area
+	Save properties for H and V views
+	Even when the table value did not changed, modified is triggered
+	Update all data when chaging the delegate
+	Save all views information (save beam scale, optics height and lock view)
+	Different graphism for H/V lenses -> for instance more alpha ?
+	Disappearing beam in test.xml
+	Lock to create beam does not work : changing the position of createBeam should change the waist position i.e. the beam stored in create beam should be relative to the create beam position
+	On the same account, the sensitivity does not work for createBeam
+	After implementing the signal mechanism for optics, check that the signals are reset after cloning, so that clones don't emit messages
+	Grammar : change optics properties order (common first, specific after)
+	Grammar : Change orientation data type
+	Grammar : add orientation attribute to genericABCD
+
+MINOR BUGS
+	Check that curved mirrors are flipped when loading and old files
+
+FUTURE RELEASE BUG
+	Problem with n > 1 and target beam
+	Really find local optimum, not 100% local optimum
+	Changing the waist in an intermediate beam might scramble the optics ordering with angle (e.g. linear cavity)
+
+CONSTANT VIGILENCE:
+	Change all parameters when changing the wavelength
+	Check initial values
+	Check that the save command saves all parameters & optics
+	Translations
+	Pedantic
+	Valgrind
+	API documentation
+	check that .c_str() stl strings are enclosed in a QString::fromUtf8
+	check const functions
+	check that the program starts without settings
+
+TESTS:
+	check grammar conformity : xmllint --dtdvalid gui/xslt/gaussianbeam_1_2.dtd file.xml
+	apply xsl stylesheet     : xmlpatterns
+
+Problems with id :
+	- in 0.4 (file format 1.1), there is a bug when loading an old file : all the id are loaded and set to 0, since the id was not existing...
+	- in 0.4 (file format 1.1), the id counter starts at 0 when loading a file. For this reason, several optics might have the same id.
