@@ -17,6 +17,6 @@
 		<file>images/gaussianbeam16.png</file>
 		<file>xslt/1_0_to_1_1.xsl</file>
 		<file>xslt/1_1_to_1_2.xsl</file>
-		<file>../po/GaussianBeam_fr.qm</file>
+		<!-- this line breaks the MacOS compile: <file>../po/GaussianBeam_fr.qm</file> -->
 	</qresource>
 </RCC>
