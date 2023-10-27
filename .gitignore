@@ -1,0 +1,9 @@
+*.swp
+*.o
+.*
+moc_*
+*.qm
+qrc_*
+ui_*h
+Makefile
+gaussianbeam
