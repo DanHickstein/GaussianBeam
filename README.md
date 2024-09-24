@@ -24,5 +24,5 @@ make
 # run it in standalone
 ./gaussianbeam
 # or install it
-make install
+sudo make install
 ```
