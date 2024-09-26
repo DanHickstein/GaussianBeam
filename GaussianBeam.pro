@@ -21,8 +21,8 @@ CODECFORTR     = UTF-8
 CODECFORSRC    = UTF-8
 
 # Destinations
-BIN_DIR  = $(CUSTOM_DESTDIR)/usr/bin
-DATA_DIR = $(CUSTOM_DESTDIR)/usr/share/gaussianbeam
+BIN_DIR  = /usr/bin
+DATA_DIR = /usr/share/gaussianbeam
 
 # Files to install
 target.path = $$BIN_DIR

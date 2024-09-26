@@ -32,6 +32,7 @@ class GaussianBeamWidget;
 class GaussianBeamModel;
 class CornerWidget;
 class TablePropertySelector;
+class QItemSelectionModel;
 class QDoubleSpinBox;
 class QTableView;
 
